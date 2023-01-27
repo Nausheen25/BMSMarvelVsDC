@@ -11,7 +11,7 @@ class MovieCollectionViewCell: UICollectionViewCell {
     
     //MARK: - IBOutlet variables
     @IBOutlet weak var viewBGContainer: UIView!
-    @IBOutlet weak var imageVwMoviePoster: UIView!
+    @IBOutlet weak var imageVwMoviePoster: UIImageView!
     @IBOutlet weak var labelMovieName: UILabel!
     @IBOutlet weak var labelLikesCount: UILabel!
     
@@ -43,5 +43,6 @@ class MovieCollectionViewCell: UICollectionViewCell {
     func updateCellWith(movieData: MarvelDCResponse.Movies){
         labelMovieName.text = movieData.name ?? .empty
         labelLikesCount.text = "Likes: \(movieData.likeCount ?? 0)"
+        imageVwMoviePoster.loadImagefrom(movieData.image_url ?? .empty, placeholderImage: UIImage(named: "movie-poster-placeholder"))
     }
 }
