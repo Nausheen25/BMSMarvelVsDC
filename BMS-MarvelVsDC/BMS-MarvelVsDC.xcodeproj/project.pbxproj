@@ -16,6 +16,12 @@
 		297CAA362983ACD3005D2319 /* BMS_MarvelVsDCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA352983ACD3005D2319 /* BMS_MarvelVsDCTests.swift */; };
 		297CAA402983ACD3005D2319 /* BMS_MarvelVsDCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA3F2983ACD3005D2319 /* BMS_MarvelVsDCUITests.swift */; };
 		297CAA422983ACD3005D2319 /* BMS_MarvelVsDCUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA412983ACD3005D2319 /* BMS_MarvelVsDCUITestsLaunchTests.swift */; };
+		297CAA592983AEB3005D2319 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA582983AEB3005D2319 /* UIView+Extension.swift */; };
+		297CAA5B2983B7C8005D2319 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA5A2983B7C8005D2319 /* APIManager.swift */; };
+		297CAA5D2983E175005D2319 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA5C2983E175005D2319 /* APIConstants.swift */; };
+		297CAA5F2983E205005D2319 /* APIHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA5E2983E205005D2319 /* APIHeader.swift */; };
+		297CAA632983E25E005D2319 /* MovieAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA622983E25E005D2319 /* MovieAPIManager.swift */; };
+		297CAA652983E404005D2319 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA642983E404005D2319 /* UIViewController+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		297CAA3B2983ACD3005D2319 /* BMS-MarvelVsDCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMS-MarvelVsDCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		297CAA3F2983ACD3005D2319 /* BMS_MarvelVsDCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMS_MarvelVsDCUITests.swift; sourceTree = "<group>"; };
 		297CAA412983ACD3005D2319 /* BMS_MarvelVsDCUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMS_MarvelVsDCUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		297CAA582983AEB3005D2319 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		297CAA5A2983B7C8005D2319 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		297CAA5C2983E175005D2319 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		297CAA5E2983E205005D2319 /* APIHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeader.swift; sourceTree = "<group>"; };
+		297CAA622983E25E005D2319 /* MovieAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIManager.swift; sourceTree = "<group>"; };
+		297CAA642983E404005D2319 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +111,10 @@
 		297CAA1D2983ACD2005D2319 /* BMS-MarvelVsDC */ = {
 			isa = PBXGroup;
 			children = (
-				297CAA1E2983ACD2005D2319 /* AppDelegate.swift */,
-				297CAA202983ACD2005D2319 /* SceneDelegate.swift */,
-				297CAA222983ACD2005D2319 /* ViewController.swift */,
-				297CAA242983ACD2005D2319 /* Main.storyboard */,
-				297CAA272983ACD3005D2319 /* Assets.xcassets */,
+				297CAA512983AE22005D2319 /* Assets */,
+				297CAA502983AE11005D2319 /* ApplicationFile */,
+				297CAA4F2983AE04005D2319 /* Modules */,
+				297CAA4E2983ADF9005D2319 /* Utility */,
 				297CAA292983ACD3005D2319 /* LaunchScreen.storyboard */,
 				297CAA2C2983ACD3005D2319 /* Info.plist */,
 			);
@@ -125,6 +136,101 @@
 				297CAA412983ACD3005D2319 /* BMS_MarvelVsDCUITestsLaunchTests.swift */,
 			);
 			path = "BMS-MarvelVsDCUITests";
+			sourceTree = "<group>";
+		};
+		297CAA4E2983ADF9005D2319 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				297CAA572983AE67005D2319 /* CommonView */,
+				297CAA562983AE60005D2319 /* Extensions */,
+				297CAA552983AE56005D2319 /* Network */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		297CAA4F2983AE04005D2319 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				297CAA542983AE3A005D2319 /* Model */,
+				297CAA532983AE31005D2319 /* View */,
+				297CAA522983AE2C005D2319 /* ViewModel */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		297CAA502983AE11005D2319 /* ApplicationFile */ = {
+			isa = PBXGroup;
+			children = (
+				297CAA1E2983ACD2005D2319 /* AppDelegate.swift */,
+				297CAA202983ACD2005D2319 /* SceneDelegate.swift */,
+			);
+			path = ApplicationFile;
+			sourceTree = "<group>";
+		};
+		297CAA512983AE22005D2319 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				297CAA272983ACD3005D2319 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		297CAA522983AE2C005D2319 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		297CAA532983AE31005D2319 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				297CAA222983ACD2005D2319 /* ViewController.swift */,
+				297CAA242983ACD2005D2319 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		297CAA542983AE3A005D2319 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		297CAA552983AE56005D2319 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				297CAA612983E255005D2319 /* APIs */,
+				297CAA5A2983B7C8005D2319 /* APIManager.swift */,
+				297CAA5C2983E175005D2319 /* APIConstants.swift */,
+				297CAA5E2983E205005D2319 /* APIHeader.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		297CAA562983AE60005D2319 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				297CAA582983AEB3005D2319 /* UIView+Extension.swift */,
+				297CAA642983E404005D2319 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		297CAA572983AE67005D2319 /* CommonView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommonView;
+			sourceTree = "<group>";
+		};
+		297CAA612983E255005D2319 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				297CAA622983E25E005D2319 /* MovieAPIManager.swift */,
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +364,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				297CAA652983E404005D2319 /* UIViewController+Extension.swift in Sources */,
+				297CAA5F2983E205005D2319 /* APIHeader.swift in Sources */,
+				297CAA5D2983E175005D2319 /* APIConstants.swift in Sources */,
 				297CAA232983ACD2005D2319 /* ViewController.swift in Sources */,
 				297CAA1F2983ACD2005D2319 /* AppDelegate.swift in Sources */,
+				297CAA5B2983B7C8005D2319 /* APIManager.swift in Sources */,
+				297CAA632983E25E005D2319 /* MovieAPIManager.swift in Sources */,
+				297CAA592983AEB3005D2319 /* UIView+Extension.swift in Sources */,
 				297CAA212983ACD2005D2319 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
