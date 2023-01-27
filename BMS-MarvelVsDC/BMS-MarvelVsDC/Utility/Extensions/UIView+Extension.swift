@@ -14,6 +14,12 @@ extension UIView{
         self.layer.masksToBounds = true
     }
     
+    /// Make border color to the view
+    func addBorder(color: UIColor = .black , width: CGFloat = 1){
+        self.layer.borderWidth = width
+        self.layer.borderColor = color.cgColor
+    }
+    
     /// Resposible to create and manage UIView from `Nib` file from any class.
     /// Use
     /// let view : CustomView = .fromNib()
