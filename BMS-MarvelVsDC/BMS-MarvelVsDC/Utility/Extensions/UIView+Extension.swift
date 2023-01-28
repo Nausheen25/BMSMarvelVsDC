@@ -73,3 +73,20 @@ extension UIView{
         }
     }
 }
+
+
+//MARK: Error view
+extension UIView{
+    func showErrorView(errorMessage: String) -> ErrorView{
+        let errorView: ErrorView = .fromNib()
+        self.addEmbededSubview(errorView)
+        errorView.updateViewWithData(errorMessage: errorMessage)
+        return errorView
+    }
+    
+    func removeErrorView(){
+        for view in subviews where view is ErrorView{
+            view.removeFromSuperview()
+        }
+    }
+}

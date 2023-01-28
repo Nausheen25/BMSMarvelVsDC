@@ -23,6 +23,7 @@ struct APIConstants{
 
 
 enum APIErrors: String, Error {
+    
     case invalidUrl = "Invalid Url"
     case dataFailure = "Invalid Data"
     case invalidResponse = "Something went wrong! Error in parsing data"

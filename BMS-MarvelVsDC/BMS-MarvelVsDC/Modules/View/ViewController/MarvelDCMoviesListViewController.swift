@@ -26,7 +26,7 @@ class MarvelDCMoviesListViewController: UIViewController {
 
     private func initialVCSetup(){
         tableViewSetup()
-        viewModel.getMoviesList()
+        getDataForMoviesList()
     }
     
     private func tableViewSetup(){
@@ -36,7 +36,11 @@ class MarvelDCMoviesListViewController: UIViewController {
         tableView.registerCell(cellIdentifier: HorizontalListTableViewCell.cellIdentifier)
         tableView.separatorStyle = .none
     }
-
+    
+    private func getDataForMoviesList(){
+        self.view.showLoaderView()
+        viewModel.getMoviesList()
+    }
 }
 
 //MARK: - UITableViewDataSource
@@ -93,11 +97,19 @@ extension MarvelDCMoviesListViewController: MoviesVMDelegate{
     
     func didSetMoviesListData() {
         DispatchQueue.main.async {
+            self.view.hideLoaderView()
             self.tableView.reloadData()
         }
     }
     
     func didAPIReceiveFailure(errorMessage: String) {
-        
+        DispatchQueue.main.async {
+            self.view.hideLoaderView()
+            let errorVw = self.view.showErrorView(errorMessage: errorMessage)
+            errorVw.didClickRetry = {
+                self.view.removeErrorView()
+                self.getDataForMoviesList()
+            }
+        }
     }
 }

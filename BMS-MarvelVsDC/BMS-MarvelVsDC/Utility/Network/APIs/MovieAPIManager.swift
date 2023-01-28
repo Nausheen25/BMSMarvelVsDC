@@ -11,7 +11,7 @@ import Foundation
 class MovieAPIManager{
     
     func getMarvelVsDCList(onSuccess:@escaping(MarvelDCResponse) -> Void, onFailure:@escaping(APIErrors) -> Void){
-        var url = APIConstants.BaseURLs().preproductionURL + APIConstants.Endpoints.marvelVsDCList.rawValue
+        let url = APIConstants.BaseURLs().preproductionURL + APIConstants.Endpoints.marvelVsDCList.rawValue
         APIManager().GET(requestUrl: url, resultType: MarvelDCResponse.self) { result in
             switch result {
             case .success(let returnedResponse):
