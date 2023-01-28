@@ -24,8 +24,6 @@ class MoviesListViewModel{
     
     weak var delegate: MoviesVMDelegate?
     
-    var listApiSuccess: (() -> Void)?
-    
     func getMoviesList(){
         MovieAPIManager().getMarvelVsDCList { response in
             self.moviesListResponse = response
