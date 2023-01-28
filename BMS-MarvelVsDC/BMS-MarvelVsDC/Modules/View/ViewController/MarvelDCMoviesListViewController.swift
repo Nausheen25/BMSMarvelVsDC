@@ -31,6 +31,7 @@ class MarvelDCMoviesListViewController: UIViewController {
     
     private func tableViewSetup(){
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.registerCell(cellIdentifier: MovieTableViewCell.cellIdentifier)
         tableView.registerCell(cellIdentifier: HorizontalListTableViewCell.cellIdentifier)
         tableView.separatorStyle = .none
@@ -47,9 +48,9 @@ extension MarvelDCMoviesListViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch viewModel.listSections[section]{
-        case .DC:
-            return 1
         case .Marvel:
+            return 1
+        case .DC:
             return viewModel.moviesListResponse?.dc?.count ?? 0
         }
     }
@@ -57,23 +58,34 @@ extension MarvelDCMoviesListViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch viewModel.listSections[indexPath.section]{
         case .DC:
-            let cell = tableView.dequeueReusableCell(withIdentifier: HorizontalListTableViewCell.cellIdentifier, for: indexPath)
-            guard let movieCell = cell as? HorizontalListTableViewCell else {return cell}
-            if let movies = viewModel.moviesListResponse?.dc{
-                movieCell.movieList = movies
+            let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.cellIdentifier, for: indexPath)
+            guard let movieCell = cell as? MovieTableViewCell else {return cell}
+            if let movie = viewModel.moviesListResponse?.dc?[indexPath.row]{
+                movieCell.updateCellWith(movieData: movie)
             }
             return movieCell
         case .Marvel:
-            let cell = tableView.dequeueReusableCell(withIdentifier: MovieTableViewCell.cellIdentifier, for: indexPath)
-            guard let movieCell = cell as? MovieTableViewCell else {return cell}
-            if let movie = viewModel.moviesListResponse?.marvel?[indexPath.row]{
-                movieCell.updateCellWith(movieData: movie)
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: HorizontalListTableViewCell.cellIdentifier, for: indexPath)
+            guard let movieCell = cell as? HorizontalListTableViewCell else {return cell}
+            if let movies = viewModel.moviesListResponse?.marvel{
+                movieCell.movieList = movies
             }
             return movieCell
         }
     }
-    
-    
+}
+
+//MARK: - UITableViewDataSource
+extension MarvelDCMoviesListViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch viewModel.listSections[section]{
+        case .Marvel:
+            return "MARVEL"
+        case .DC:
+            return "DC COMICS"
+        }
+    }
 }
 
 //MARK: - MoviesVMDelegate
@@ -83,5 +95,9 @@ extension MarvelDCMoviesListViewController: MoviesVMDelegate{
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    
+    func didAPIReceiveFailure(errorMessage: String) {
+        
     }
 }

@@ -9,6 +9,7 @@ import Foundation
 
 protocol MoviesVMDelegate: AnyObject{
     func didSetMoviesListData()
+    func didAPIReceiveFailure(errorMessage: String)
 }
 
 class MoviesListViewModel{
@@ -31,17 +32,17 @@ class MoviesListViewModel{
             self.setSectionsForList()
             self.delegate?.didSetMoviesListData()
         } onFailure: { error in
-            print(error.rawValue)
+            self.delegate?.didAPIReceiveFailure(errorMessage: "\(error.rawValue)")
         }
     }
     
     private func setSectionsForList(){
         listSections.removeAll()
-        if (self.moviesListResponse?.dc?.count ?? 0) > 0{
-            self.listSections.append(.DC)
-        }
         if (self.moviesListResponse?.marvel?.count ?? 0) > 0{
             self.listSections.append(.Marvel)
+        }
+        if (self.moviesListResponse?.dc?.count ?? 0) > 0{
+            self.listSections.append(.DC)
         }
     }
 }
