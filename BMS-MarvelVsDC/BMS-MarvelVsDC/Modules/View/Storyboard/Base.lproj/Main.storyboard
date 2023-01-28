@@ -16,15 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fqp-4k-2cB">
-                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Fqp-4k-2cB">
+                                <rect key="frame" x="0.0" y="47" width="390" height="797"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fqp-4k-2cB" secondAttribute="bottom" id="IrV-lf-sJs"/>
+                            <constraint firstAttribute="bottom" secondItem="Fqp-4k-2cB" secondAttribute="bottom" id="IrV-lf-sJs"/>
                             <constraint firstItem="Fqp-4k-2cB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ux3-E8-Fq0"/>
                             <constraint firstItem="Fqp-4k-2cB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="d2h-u6-CN3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fqp-4k-2cB" secondAttribute="trailing" id="uz3-wk-olt"/>

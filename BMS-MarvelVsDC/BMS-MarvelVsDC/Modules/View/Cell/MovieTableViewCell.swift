@@ -28,7 +28,7 @@ class MovieTableViewCell: UITableViewCell {
     }
     
     private func initialCellSetup(){
-        viewBGContainer.addRoundCorner(value: 10)
+        viewBGContainer.addRoundCorner(value: 2)
         imageVwMoviePoster.addRoundCorner(value: 8)
         viewBGContainer.addBorder(color: .black, width: 1.5)
         self.selectionStyle = .none

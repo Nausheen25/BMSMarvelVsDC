@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Seo-Ko-TKo">
-                        <rect key="frame" x="10" y="10" width="339" height="272"/>
+                        <rect key="frame" x="16" y="10" width="327" height="272"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zkz-Bo-WwS">
                                 <rect key="frame" x="16" y="16" width="160" height="240"/>
@@ -27,16 +27,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="n94-xE-y9o">
-                                <rect key="frame" x="200" y="112" width="123" height="48"/>
+                                <rect key="frame" x="200" y="112" width="111" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhT-DK-Ngo">
-                                        <rect key="frame" x="0.0" y="0.0" width="123" height="19.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="111" height="19.333333333333332"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h3x-gk-RD1">
-                                        <rect key="frame" x="0.0" y="29.333333333333343" width="123" height="18.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="29.333333333333343" width="111" height="18.666666666666671"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -58,8 +58,8 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Seo-Ko-TKo" secondAttribute="bottom" constant="10" id="Ckg-q8-tVy"/>
                     <constraint firstItem="Seo-Ko-TKo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Ip2-oU-s9R"/>
-                    <constraint firstAttribute="trailing" secondItem="Seo-Ko-TKo" secondAttribute="trailing" constant="10" id="YOS-5w-vD3"/>
-                    <constraint firstItem="Seo-Ko-TKo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="se0-GG-PpV"/>
+                    <constraint firstAttribute="trailing" secondItem="Seo-Ko-TKo" secondAttribute="trailing" constant="16" id="YOS-5w-vD3"/>
+                    <constraint firstItem="Seo-Ko-TKo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="se0-GG-PpV"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -231,9 +231,9 @@
 		297CAA532983AE31005D2319 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				297CAA6A2983E704005D2319 /* Storyboard */,
 				297CAA6C2983E717005D2319 /* Cell */,
 				297CAA6B2983E70F005D2319 /* ViewController */,
-				297CAA6A2983E704005D2319 /* Storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";

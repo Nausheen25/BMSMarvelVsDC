@@ -34,6 +34,7 @@ class MarvelDCMoviesListViewController: UIViewController {
         tableView.delegate = self
         tableView.registerCell(cellIdentifier: MovieTableViewCell.cellIdentifier)
         tableView.registerCell(cellIdentifier: HorizontalListTableViewCell.cellIdentifier)
+        tableView.contentInsetAdjustmentBehavior = .never
         tableView.separatorStyle = .none
     }
     
@@ -82,13 +83,23 @@ extension MarvelDCMoviesListViewController: UITableViewDataSource{
 
 //MARK: - UITableViewDataSource
 extension MarvelDCMoviesListViewController: UITableViewDelegate{
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let containerVw = UIView()
+        let label = UILabel(frame: CGRect(x: 16, y: 0, width: tableView.frame.width - 32, height: 40))
         switch viewModel.listSections[section]{
         case .Marvel:
-            return "MARVEL"
+            label.text = "MARVEL"
         case .DC:
-            return "DC COMICS"
+            label.text = "DC COMICS"
         }
+        label.textColor = .darkGray
+        containerVw.addSubview(label)
+        return containerVw
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
 }
 
