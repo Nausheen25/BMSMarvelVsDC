@@ -789,6 +789,7 @@
 				DEVELOPMENT_TEAM = LDG758GFDP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "BMS-MarvelVsDC/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Marvel DC";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -818,6 +819,7 @@
 				DEVELOPMENT_TEAM = LDG758GFDP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "BMS-MarvelVsDC/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Marvel DC";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
