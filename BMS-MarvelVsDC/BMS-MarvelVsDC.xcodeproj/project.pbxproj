@@ -205,9 +205,7 @@
 		297CAA4F2983AE04005D2319 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				297CAA542983AE3A005D2319 /* Model */,
-				297CAA532983AE31005D2319 /* View */,
-				297CAA522983AE2C005D2319 /* ViewModel */,
+				297CAA8D2986F632005D2319 /* MoviesList */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -331,6 +329,16 @@
 				297CAA8329850C22005D2319 /* ErrorView.swift */,
 			);
 			path = ErrorView;
+			sourceTree = "<group>";
+		};
+		297CAA8D2986F632005D2319 /* MoviesList */ = {
+			isa = PBXGroup;
+			children = (
+				297CAA542983AE3A005D2319 /* Model */,
+				297CAA532983AE31005D2319 /* View */,
+				297CAA522983AE2C005D2319 /* ViewModel */,
+			);
+			path = MoviesList;
 			sourceTree = "<group>";
 		};
 		730DF378EF8D207F641D6215 /* Frameworks */ = {
