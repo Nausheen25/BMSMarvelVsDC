@@ -39,6 +39,7 @@
 		297CAA8529850C22005D2319 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA8329850C22005D2319 /* ErrorView.swift */; };
 		297CAA872985140A005D2319 /* MovieAPIManagerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA8629851409005D2319 /* MovieAPIManagerTestCase.swift */; };
 		297CAA8929851767005D2319 /* MoviesListViewModelTestCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA8829851767005D2319 /* MoviesListViewModelTestCases.swift */; };
+		297CAA8C2985711F005D2319 /* MarvelDCMoviesListViewControllerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297CAA8A29857113005D2319 /* MarvelDCMoviesListViewControllerTestCase.swift */; };
 		AC79E27BAC6C6512E7D59E3D /* Pods_BMS_MarvelVsDC_BMS_MarvelVsDCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37506479A2709D1A7CC29FC8 /* Pods_BMS_MarvelVsDC_BMS_MarvelVsDCUITests.framework */; };
 		CE57ED7033493422685A6C99 /* Pods_BMS_MarvelVsDCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85780A7C24C538342DE84392 /* Pods_BMS_MarvelVsDCTests.framework */; };
 /* End PBXBuildFile section */
@@ -99,6 +100,7 @@
 		297CAA8329850C22005D2319 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		297CAA8629851409005D2319 /* MovieAPIManagerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPIManagerTestCase.swift; sourceTree = "<group>"; };
 		297CAA8829851767005D2319 /* MoviesListViewModelTestCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewModelTestCases.swift; sourceTree = "<group>"; };
+		297CAA8A29857113005D2319 /* MarvelDCMoviesListViewControllerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelDCMoviesListViewControllerTestCase.swift; sourceTree = "<group>"; };
 		37506479A2709D1A7CC29FC8 /* Pods_BMS_MarvelVsDC_BMS_MarvelVsDCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BMS_MarvelVsDC_BMS_MarvelVsDCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0DD68A70CC8F1402AC1979 /* Pods-BMS-MarvelVsDC-BMS-MarvelVsDCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMS-MarvelVsDC-BMS-MarvelVsDCUITests.release.xcconfig"; path = "Target Support Files/Pods-BMS-MarvelVsDC-BMS-MarvelVsDCUITests/Pods-BMS-MarvelVsDC-BMS-MarvelVsDCUITests.release.xcconfig"; sourceTree = "<group>"; };
 		80DEAD5ECCB898A304D5CFA5 /* Pods-BMS-MarvelVsDCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BMS-MarvelVsDCTests.release.xcconfig"; path = "Target Support Files/Pods-BMS-MarvelVsDCTests/Pods-BMS-MarvelVsDCTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				297CAA352983ACD3005D2319 /* BMS_MarvelVsDCTests.swift */,
+				297CAA8A29857113005D2319 /* MarvelDCMoviesListViewControllerTestCase.swift */,
 				297CAA8629851409005D2319 /* MovieAPIManagerTestCase.swift */,
 				297CAA8829851767005D2319 /* MoviesListViewModelTestCases.swift */,
 			);
@@ -623,6 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				297CAA872985140A005D2319 /* MovieAPIManagerTestCase.swift in Sources */,
+				297CAA8C2985711F005D2319 /* MarvelDCMoviesListViewControllerTestCase.swift in Sources */,
 				297CAA362983ACD3005D2319 /* BMS_MarvelVsDCTests.swift in Sources */,
 				297CAA8929851767005D2319 /* MoviesListViewModelTestCases.swift in Sources */,
 			);

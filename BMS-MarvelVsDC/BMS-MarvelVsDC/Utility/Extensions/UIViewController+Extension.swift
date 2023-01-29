@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 enum Storyboard: String{
-    case Movies
+    case Main
 }
 
 extension UIViewController{

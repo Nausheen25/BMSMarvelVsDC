@@ -39,16 +39,10 @@ class HorizontalListTableViewCell: UITableViewCell {
         movieCollectionView.delegate = self
         movieCollectionView.registerCell(cellIdentifier: MovieCollectionViewCell.cellIdentifier)
     }
-    //MARK: - Helper Methods
-    
-    
-    //MARK: - IBAction button
-    
-    
-    //MARK: - Update Methods
     
 }
 
+//MARK: - UICollectionViewDataSource
 extension HorizontalListTableViewCell: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movieList?.count ?? 0
@@ -64,6 +58,7 @@ extension HorizontalListTableViewCell: UICollectionViewDataSource{
     }
 }
 
+//MARK: - UICollectionViewDelegateFlowLayout
 extension HorizontalListTableViewCell: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width/1.2, height: collectionView.frame.height)

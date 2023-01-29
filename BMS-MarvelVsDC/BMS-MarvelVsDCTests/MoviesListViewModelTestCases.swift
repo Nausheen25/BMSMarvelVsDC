@@ -26,5 +26,4 @@ final class MoviesListViewModelTestCases: XCTestCase {
         
         waitForExpectations(timeout: 15)
     }
-   
 }
